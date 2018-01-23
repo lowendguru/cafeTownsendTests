@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="CafeTownsend Test Suite" duration-ms="48798" started-at="2018-01-23T10:13:37Z" finished-at="2018-01-23T10:14:26Z">
+    <groups>
+    </groups>
+    <test name="CafeTownsend Tests" duration-ms="48798" started-at="2018-01-23T10:13:37Z" finished-at="2018-01-23T10:14:26Z">
+      <class name="tests.DeleteEmployeeTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.DeleteEmployeeTest@1fd3711]" name="setUp" is-config="true" duration-ms="0" started-at="2018-01-23T07:13:49Z" finished-at="2018-01-23T07:13:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="deleteEmployee()[pri:0, instance:tests.DeleteEmployeeTest@1fd3711]" name="deleteEmployee" duration-ms="20101" started-at="2018-01-23T07:13:49Z" finished-at="2018-01-23T07:14:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteEmployee -->
+      </class> <!-- tests.DeleteEmployeeTest -->
+      <class name="tests.AddEmployeeTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.AddEmployeeTest@82d64]" name="setUp" is-config="true" duration-ms="2874" started-at="2018-01-23T07:13:37Z" finished-at="2018-01-23T07:13:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="addEmployee()[pri:0, instance:tests.AddEmployeeTest@82d64]" name="addEmployee" duration-ms="9023" started-at="2018-01-23T07:13:40Z" finished-at="2018-01-23T07:13:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.AddEmployeeTest@82d64]" name="tearDown" is-config="true" duration-ms="713" started-at="2018-01-23T07:14:25Z" finished-at="2018-01-23T07:14:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.DeleteEmployeeTest@1fd3711]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-01-23T07:14:26Z" finished-at="2018-01-23T07:14:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.EditEmployeeTest@d3bd8b]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-01-23T07:14:26Z" finished-at="2018-01-23T07:14:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.InvalidLoginTest@ba2a48]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-01-23T07:14:26Z" finished-at="2018-01-23T07:14:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.LogoutTest@12050f6]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-01-23T07:14:26Z" finished-at="2018-01-23T07:14:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.ValidLoginTest@181a1bc]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-01-23T07:14:26Z" finished-at="2018-01-23T07:14:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.AddEmployeeTest -->
+      <class name="tests.EditEmployeeTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.EditEmployeeTest@d3bd8b]" name="setUp" is-config="true" duration-ms="0" started-at="2018-01-23T07:14:09Z" finished-at="2018-01-23T07:14:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="editEmployee()[pri:0, instance:tests.EditEmployeeTest@d3bd8b]" name="editEmployee" duration-ms="7267" started-at="2018-01-23T07:14:09Z" finished-at="2018-01-23T07:14:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editEmployee -->
+      </class> <!-- tests.EditEmployeeTest -->
+      <class name="tests.ValidLoginTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.ValidLoginTest@181a1bc]" name="setUp" is-config="true" duration-ms="1" started-at="2018-01-23T07:14:23Z" finished-at="2018-01-23T07:14:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:tests.ValidLoginTest@181a1bc]" name="validLogin" duration-ms="2589" started-at="2018-01-23T07:14:23Z" finished-at="2018-01-23T07:14:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+      </class> <!-- tests.ValidLoginTest -->
+      <class name="tests.LogoutTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.LogoutTest@12050f6]" name="setUp" is-config="true" duration-ms="0" started-at="2018-01-23T07:14:19Z" finished-at="2018-01-23T07:14:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validLogout()[pri:0, instance:tests.LogoutTest@12050f6]" name="validLogout" duration-ms="3637" started-at="2018-01-23T07:14:19Z" finished-at="2018-01-23T07:14:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogout -->
+      </class> <!-- tests.LogoutTest -->
+      <class name="tests.InvalidLoginTest">
+        <test-method status="PASS" signature="invalidLogin()[pri:0, instance:tests.InvalidLoginTest@ba2a48]" name="invalidLogin" duration-ms="2574" started-at="2018-01-23T07:14:17Z" finished-at="2018-01-23T07:14:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLogin -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.InvalidLoginTest@ba2a48]" name="setUp" is-config="true" duration-ms="0" started-at="2018-01-23T07:14:17Z" finished-at="2018-01-23T07:14:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+      </class> <!-- tests.InvalidLoginTest -->
+    </test> <!-- CafeTownsend Tests -->
+  </suite> <!-- CafeTownsend Test Suite -->
+</testng-results>
