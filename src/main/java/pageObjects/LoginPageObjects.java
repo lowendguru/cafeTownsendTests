@@ -4,29 +4,29 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LoginPageObjects {
+public class LoginPageObjects extends BasePageObject {
 
 	private static WebElement element = null;
 
 	public static WebElement usernameTextField(WebDriver driver) {
-		element = driver.findElement(By.xpath("//input[@type='text']"));
+		element = getWebElement(driver, By.xpath("//input[@type='text']"));
 		return element;
 	}
-	
-	public static WebElement passwordTextField(WebDriver driver){
-		element = driver.findElement(By.xpath("//input[@type='password']"));
+
+	public static WebElement passwordTextField(WebDriver driver) {
+		element = getWebElement(driver, By.xpath("//input[@type='password']"));
 		return element;
 	}
-	
-	public static WebElement loginButton(WebDriver driver){
-		element = driver.findElement(By.xpath("//button[@type='submit']"));
+
+	public static WebElement loginButton(WebDriver driver) {
+		element = getWebElement(driver, By.xpath("//button[@type='submit']"));
 		return element;
 	}
-	
-	public static WebElement invalidLoginErrorMessage(WebDriver driver){
-		element = driver.findElement(By.xpath("//fieldset/p"));
+
+	public static WebElement invalidLoginErrorMessage(WebDriver driver) {
+		element = getWebElementWithText(driver, By.xpath("//fieldset/p"),
+				properties.getProperty("invalidLoginMessage"));
 		return element;
 	}
-	
-	
+
 }

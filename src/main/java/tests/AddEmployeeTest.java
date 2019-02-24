@@ -29,7 +29,6 @@ public class AddEmployeeTest extends BaseTest {
 
 		// Click Create button
 		EmployeesPageObjects.createButton(driver).click();
-		waiting.waitForLoad(driver);
 
 		String firstName = RandomValueGenerator.getRandomString();
 		String lastName = RandomValueGenerator.getRandomString();
@@ -41,7 +40,6 @@ public class AddEmployeeTest extends BaseTest {
 
 		// Click Add button
 		NewEmployeePageObjects.addButton(driver).click();
-		waiting.waitForLoad(driver);
 
 		// Verify that the new entry is present in the list
 		boolean isPresentInList = false;

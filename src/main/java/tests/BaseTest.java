@@ -29,7 +29,7 @@ public class BaseTest {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--disable-extensions");
 			driver = new ChromeDriver(options);
-			wait = new WebDriverWait(driver, 20);
+
 		}
 
 	}
@@ -41,7 +41,6 @@ public class BaseTest {
 	protected void login() {
 		// 1. Go to the login page
 		driver.get(properties.getProperty("baseUrl"));
-		waiting.waitForLoad(driver);
 
 		// 2. Enter valid credentials in the Username and Password fields.
 		LoginPageObjects.usernameTextField(driver).sendKeys(properties.getProperty("validUsername"));
@@ -49,7 +48,7 @@ public class BaseTest {
 
 		// 3. Click on the Login button
 		LoginPageObjects.loginButton(driver).click();
-		waiting.waitForLoad(driver);
+		// waiting.waitForLoad(driver);
 	}
 
 	protected void fillEmployeeDetailsForm(String firstName, String lastName, String startDate, String email) {

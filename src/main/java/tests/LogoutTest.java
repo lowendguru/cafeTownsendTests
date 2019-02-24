@@ -26,7 +26,6 @@ public class LogoutTest extends BaseTest {
 
 		// click on the logout button
 		EmployeesPageObjects.logoutButton(driver).click();
-		waiting.waitForLoad(driver);
 
 		// Assert the user is logged out
 		Assert.assertTrue(driver.getCurrentUrl().contains(properties.getProperty("loginURL")),

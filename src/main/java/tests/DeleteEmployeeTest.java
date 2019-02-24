@@ -58,7 +58,6 @@ public class DeleteEmployeeTest extends BaseTest {
 
 		// click on Edit button
 		EmployeesPageObjects.editButton(driver).click();
-		waiting.waitForLoad(driver);
 
 		// click on delete button
 		EditEmployeePageObjects.deleteButton(driver).click();
@@ -66,7 +65,6 @@ public class DeleteEmployeeTest extends BaseTest {
 		// alert validation is displayed, press OK
 		waitingAlert.waitForAlert(driver);
 		driver.switchTo().alert().accept();
-		waiting.waitForLoad(driver);
 
 		// verify that changes took effect, deleted item is no longer present
 		boolean isPresentInList = false;

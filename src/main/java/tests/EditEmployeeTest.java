@@ -37,7 +37,6 @@ public class EditEmployeeTest extends BaseTest {
 
 		// click on Edit button
 		EmployeesPageObjects.editButton(driver).click();
-		waiting.waitForLoad(driver);
 
 		// modifiy contents of fields
 		String firstName = RandomValueGenerator.getRandomString();
@@ -48,7 +47,6 @@ public class EditEmployeeTest extends BaseTest {
 
 		// click on Update button
 		EditEmployeePageObjects.updateButton(driver).click();
-		waiting.waitForLoad(driver);
 
 		// verify that changes took effect
 		boolean isPresentInList = false;

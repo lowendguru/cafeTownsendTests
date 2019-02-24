@@ -25,7 +25,7 @@ public class InvalidLoginTest extends BaseTest {
 		 
 		 //1. Go to the login page
 		 driver.get(properties.getProperty("baseUrl"));
-		 waiting.waitForLoad(driver);
+		 //waiting.waitForLoad(driver);
 		 
 		 //2. Enter valid credentials in the Username and Password fields.		 
 		 LoginPageObjects.usernameTextField(driver).sendKeys(properties.getProperty("invalidUsername"));
@@ -33,7 +33,7 @@ public class InvalidLoginTest extends BaseTest {
 		 
 		 //3. Click on the Login button
 		 LoginPageObjects.loginButton(driver).click();
-		 waiting.waitForLoad(driver);
+		// waiting.waitForLoad(driver);
 		 
 		 // Assert result
 		 String errorMessage = LoginPageObjects.invalidLoginErrorMessage(driver).getText();
