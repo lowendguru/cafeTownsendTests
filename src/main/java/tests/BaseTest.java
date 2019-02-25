@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 import pageObjects.LoginPageObjects;
 import pageObjects.NewEmployeePageObjects;
@@ -15,27 +17,26 @@ import utils.WaitForPageToLoad;
 
 public class BaseTest {
 
-	protected static WebDriver driver = null;
+	protected static WebDriver driver;
 	protected Properties properties = PropertiesFileReader.getProperties();
 
 	protected WaitForPageToLoad waiting = new WaitForPageToLoad();
 	protected WebDriverWait wait;
 	protected WaitForAlert waitingAlert = new WaitForAlert();
 
+	@BeforeClass
 	protected void setUp() {
-
-		if (driver == null) {
-			System.setProperty("webdriver.chrome.driver", properties.getProperty("chromeDriverLocation"));
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--disable-extensions");
-			driver = new ChromeDriver(options);
-
-		}
-
+		System.setProperty("webdriver.chrome.driver", properties.getProperty("chromeDriverLocation"));
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--disable-extensions");
+		driver = new ChromeDriver(options);
 	}
 
+	@AfterClass
 	protected void tearDown() {
-		driver.quit();
+		if (driver != null) {
+			driver.quit();
+		}
 	}
 
 	protected void login() {

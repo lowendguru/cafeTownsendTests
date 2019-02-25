@@ -14,7 +14,7 @@ public class EditEmployeePageObjects extends BasePageObject{
 	}
 	
 	public static WebElement deleteButton(WebDriver driver) {
-		element = getWebElement(driver, By.xpath("//fieldset/div/p")); 
+		element = getWebElement(driver, By.xpath("//p[@ng-click='deleteEmployee()']")); 
 		return element;
 	}
 }

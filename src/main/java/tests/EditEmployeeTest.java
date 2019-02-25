@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -19,7 +19,7 @@ public class EditEmployeeTest extends BaseTest {
 		super.setUp();
 	}
 
-	@AfterTest
+	@AfterClass
 	public void tearDown() {
 		super.tearDown();
 	}
