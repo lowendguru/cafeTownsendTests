@@ -29,6 +29,8 @@ public class BaseTest {
 		System.setProperty("webdriver.chrome.driver", properties.getProperty("chromeDriverLocation"));
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-extensions");
+    //   options.addArguments("--headless");
+        options.addArguments("no-sandbox");
 		driver = new ChromeDriver(options);
 	}
 

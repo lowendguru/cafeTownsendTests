@@ -1,10 +1,42 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="CafeTownsend Test Suite">
+<suite name="CafeTownsend Test Suite" >
 
-	<test name="CafeTownsend Tests">
-		<packages>
-			<package name="tests" />
-		</packages>
+	<test name="AddEmployee">
+		<classes>
+			<class name="tests.AddEmployeeTest" />
+		</classes>
 	</test>
+
+	<test name="Delete Employee">
+		<classes>
+			<class name="tests.DeleteEmployeeTest" />
+		</classes>
+	</test>
+
+	<test name="Edit Employee">
+		<classes>
+			<class name="tests.EditEmployeeTest" />
+		</classes>
+	</test>
+
+	<test name="Invalid Login">
+		<classes>
+			<class name="tests.InvalidLoginTest" />
+		</classes>
+	</test>
+
+	<test name="Logout">
+		<classes>
+			<class name="tests.LogoutTest" />
+		</classes>
+	</test>
+
+	<test name="Valid Login">
+		<classes>
+			<class name="tests.ValidLoginTest" />
+		</classes>
+	</test>
+
+
 
 </suite>
