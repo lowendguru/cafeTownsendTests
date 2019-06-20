@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.LoginPageObjects;
 import pageObjects.NewEmployeePageObjects;
 import utils.PropertiesFileReader;
@@ -26,7 +27,8 @@ public class BaseTest {
 
 	@BeforeClass
 	protected void setUp() {
-		System.setProperty("webdriver.chrome.driver", properties.getProperty("chromeDriverLocation"));
+		WebDriverManager.chromedriver().setup();
+	//	System.setProperty("webdriver.chrome.driver", properties.getProperty("chromeDriverLocation"));
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-extensions");
     //   options.addArguments("--headless");
