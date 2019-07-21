@@ -1,5 +1,5 @@
 /target/
-.project
+
 .classpath
 /test-output
 /allure-results
