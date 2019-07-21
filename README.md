@@ -40,9 +40,9 @@ The requirements to run this automated tests are:
 
 ### Maven project
 
-The "chromedriver.exe" file is located under the src/main/java/utils/ folder. This is assuming that tests will be executed in a Windows OS and should be changed to the appropriate chromedriver configuration if a different OS is used, also make sure you have the latest version of chromedriver (chromedriver files can be found here https://chromedriver.storage.googleapis.com/index.html).
+This is a maven project. All dependencies are managed automatically and is OS agnostic.
 
-This is a maven project, so the test suite can be executed via command line. 
+The test suite can be executed via command line. 
 ```
     $mvn clean test
 ```
