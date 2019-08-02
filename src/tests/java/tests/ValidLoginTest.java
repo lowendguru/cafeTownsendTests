@@ -27,8 +27,7 @@ public class ValidLoginTest extends BaseTest {
 
 		// Assert result
 		String greetingText = EmployeesPageObjects.greetingText(driver).getText();
-		Assert.assertEquals(greetingText, "Hello " + properties.getProperty("validUsername"),
-				"Greeting text not found.");
+		Assert.assertEquals(greetingText, "Hello " + getProperty("validUsername"), "Greeting text not found.");
 
 	}
 

@@ -19,7 +19,6 @@ import utils.WaitForPageToLoad;
 public class BaseTest {
 
 	protected static WebDriver driver;
-	protected Properties properties = PropertiesFileReader.getProperties();
 
 	protected WaitForPageToLoad waiting = new WaitForPageToLoad();
 	protected WebDriverWait wait;
@@ -28,11 +27,12 @@ public class BaseTest {
 	@BeforeClass
 	protected void setUp() {
 		WebDriverManager.chromedriver().setup();
-	//	System.setProperty("webdriver.chrome.driver", properties.getProperty("chromeDriverLocation"));
+		// System.setProperty("webdriver.chrome.driver",
+		// properties.getProperty("chromeDriverLocation"));
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-extensions");
-    //   options.addArguments("--headless");
-        options.addArguments("no-sandbox");
+		// options.addArguments("--headless");
+		options.addArguments("no-sandbox");
 		driver = new ChromeDriver(options);
 	}
 
@@ -45,11 +45,11 @@ public class BaseTest {
 
 	protected void login() {
 		// 1. Go to the login page
-		driver.get(properties.getProperty("baseUrl"));
+		driver.get(getProperty("baseUrl"));
 
 		// 2. Enter valid credentials in the Username and Password fields.
-		LoginPageObjects.usernameTextField(driver).sendKeys(properties.getProperty("validUsername"));
-		LoginPageObjects.passwordTextField(driver).sendKeys(properties.getProperty("validPassword"));
+		LoginPageObjects.usernameTextField(driver).sendKeys(getProperty("validUsername"));
+		LoginPageObjects.passwordTextField(driver).sendKeys(getProperty("validPassword"));
 
 		// 3. Click on the Login button
 		LoginPageObjects.loginButton(driver).click();
@@ -67,6 +67,10 @@ public class BaseTest {
 		NewEmployeePageObjects.emailTextField(driver).clear();
 		NewEmployeePageObjects.emailTextField(driver).sendKeys(email);
 
+	}
+
+	protected String getProperty(String propertyName) {
+		return PropertiesFileReader.getProperties().getProperty(propertyName);
 	}
 
 }

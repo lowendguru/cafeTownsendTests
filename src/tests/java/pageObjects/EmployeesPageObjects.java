@@ -41,8 +41,7 @@ public class EmployeesPageObjects extends BasePageObject{
 	public static ArrayList<WebElement> employeeList(WebDriver driver) {
 		ArrayList<WebElement> list = new ArrayList<WebElement>();
 
-		element = (new WebDriverWait(driver, Integer.parseInt(properties.getProperty("waitShortTimeout"))))
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//ul[@id='employee-list']/li")));
+		element = getWebElementClickable(driver, By.xpath("//ul[@id='employee-list']/li"));
 
 		List<WebElement> allElements = driver.findElements(By.xpath("//ul[@id='employee-list']/li"));
 

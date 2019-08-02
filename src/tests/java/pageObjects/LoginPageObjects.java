@@ -24,8 +24,7 @@ public class LoginPageObjects extends BasePageObject {
 	}
 
 	public static WebElement invalidLoginErrorMessage(WebDriver driver) {
-		element = getWebElementWithText(driver, By.xpath("//fieldset/p"),
-				properties.getProperty("invalidLoginMessage"));
+		element = getWebElementClickable(driver, By.cssSelector("p.error-message.ng-binding"));
 		return element;
 	}
 

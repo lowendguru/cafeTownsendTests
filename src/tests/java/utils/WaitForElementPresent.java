@@ -21,7 +21,7 @@ public class WaitForElementPresent {
 
 		} catch (Exception noAlert) {
 			noAlert.getMessage();
-			Assert.fail("Timeout waiting for Element to be present.");
+			Assert.fail("Timeout waiting for Element to be present: " + locator.toString());
 		}
 
 	}

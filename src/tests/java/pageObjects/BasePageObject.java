@@ -13,7 +13,7 @@ import utils.WaitForElementPresentWithText;
 
 public class BasePageObject {
 	
-	protected static Properties properties = PropertiesFileReader.getProperties();
+	
 
 	public static WebElement getWebElement(WebDriver driver, By locator) {
 		WebElement element = null;
